@@ -1,0 +1,13 @@
+<!-- res/values/themes.xml -->
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.LakatTa" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <!-- Sets the background color of the status bar -->
+        <item name="android:statusBarColor">@color/status_bar_color</item>
+
+        <!-- Makes the status bar icons (time, battery, etc.) dark for visibility on a light background -->
+        <item name="android:windowLightStatusBar">true</item>
+
+    </style>
+    <style name="Theme.LakatTa" parent="Base.Theme.LakatTa" />
+</resources>

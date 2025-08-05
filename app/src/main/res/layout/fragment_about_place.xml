@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:scrollbars="none">
+
+    <TextView
+        android:id="@+id/textViewDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="4dp"
+        android:text="The Ruins in Talisay City, Negros Occidental, is a well-preserved mansion built in the early 1900s by Don Mariano Ledesma Lacson in memory of his wife, Maria Braga.\n\nOften dubbed the 'Taj Mahal of Negros,' the mansion showcases Italian-inspired architecture with neoclassical columns and a romantic, skeletal frame made of concrete and egg white.\n\nDespite being set on fire by Filipino guerrillas during World War II to prevent Japanese occupation, the structure's resilient design allowed it to withstand destruction.\n\nSurrounded by manicured gardens and a calming ambiance, it has become a popular spot for photography, weddings, and cultural tours."
+        android:textColor="#424242"
+        android:textSize="16sp" />
+</ScrollView>
