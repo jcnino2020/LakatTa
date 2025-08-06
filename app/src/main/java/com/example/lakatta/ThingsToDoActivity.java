@@ -16,12 +16,16 @@ public class ThingsToDoActivity extends AppCompatActivity implements PlaceAdapte
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_things_to_do);
 
-        // Setup button listeners
+        // Back button still works as before
         findViewById(R.id.backButton).setOnClickListener(v -> finish());
-        findViewById(R.id.navHome).setOnClickListener(v -> finish());
-        findViewById(R.id.navMap).setOnClickListener(v -> showToast("Map is on the main screen"));
 
-        // Call the method to populate our list
+        // --- NEW NAVIGATION LOGIC ---
+        findViewById(R.id.navHome).setOnClickListener(v -> navigateToMain("HOME"));
+        findViewById(R.id.navMap).setOnClickListener(v -> navigateToMain("MAP"));
+        // Add these for the other buttons if they exist in your layout
+        // findViewById(R.id.navItinerary).setOnClickListener(v -> navigateToMain("ITINERARY"));
+        // findViewById(R.id.navProfile).setOnClickListener(v -> navigateToMain("PROFILE"));
+
         setupRecyclerView();
     }
 
@@ -74,7 +78,11 @@ public class ThingsToDoActivity extends AppCompatActivity implements PlaceAdapte
         startActivity(intent);
     }
 
-    private void showToast(String message) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    private void navigateToMain(String destination) {
+        Intent intent = new Intent(this, MainActivity.class);
+        // These flags clear all activities on top of MainActivity and bring it to the front
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        intent.putExtra("NAVIGATE_TO", destination);
+        startActivity(intent);
     }
 }

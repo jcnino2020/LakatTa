@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+</selector><?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<!-- State when the chip is selected/checked -->
+<item android:color="@android:color/white" android:state_checked="true" />
+<!-- Default state (unselected) -->
+<item android:color="#424242" />
+</selector>
